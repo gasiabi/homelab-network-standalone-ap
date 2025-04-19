@@ -1,0 +1,56 @@
+conf t
+interface BVI1
+ ip address 192.168.99.3 255.255.255.0
+ no shutdown
+exit
+
+ip default-gateway 192.168.99.1
+
+interface Dot11Radio0
+ no ip address
+ no shutdown
+ mbssid
+exit
+
+interface Dot11Radio0.10
+ encapsulation dot1Q 10
+ bridge-group 10
+ ssid KIDS-WIFI
+ no shutdown
+exit
+
+interface Dot11Radio0.20
+ encapsulation dot1Q 20
+ bridge-group 20
+ ssid PARENTS-WIFI
+ no shutdown
+exit
+
+interface GigabitEthernet0
+ no ip address
+ no shutdown
+exit
+
+interface GigabitEthernet0.10
+ encapsulation dot1Q 10
+ bridge-group 10
+ no shutdown
+exit
+
+interface GigabitEthernet0.20
+ encapsulation dot1Q 20
+ bridge-group 20
+ no shutdown
+exit
+
+dot11 ssid KIDS-WIFI
+ vlan 10
+ authentication open
+ mbssid guest-mode
+exit
+
+dot11 ssid PARENTS-WIFI
+ vlan 20
+ authentication open
+ mbssid guest-mode
+exit
