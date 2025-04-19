@@ -1,5 +1,5 @@
 #  Homelab Network with Cisco Standalone AP with VLANs and WPA2 Authentication
-This project documents a basic home lab network setup with a router, switch, and standalone access point, connecting multiple clients.
+This project documents a basic home lab network setup with a router, switch, and standalone access point, connecting multiple clients. Set up multiple SSIDs with VLANs to separate network traffic for different user groups. Configured WPA2 authentication for secure access.
 
 ## Files
 - **`configuration_files/`**  
