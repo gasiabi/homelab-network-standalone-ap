@@ -18,5 +18,3 @@ This project documents a basic home lab network setup with a router, switch, and
 
 - **`verification_commands.txt`**  
   A reference file containing useful CLI verification and troubleshooting commands for Cisco Autonomous APs and switching.
-
-✅ This uses normal list bullets.
