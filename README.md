@@ -19,3 +19,9 @@ This project documents a basic home lab network setup with a router, switch, and
 
 - **`verification_commands.txt`**  
   A reference file containing useful CLI verification and troubleshooting commands for Cisco Autonomous APs and switching.
+
+## Devices Used
+
+- **Switch**: Cisco Catalyst WS-C3560-24PS-S
+- **Access Point**: Cisco AIR-SAP2602L-E-K9
+- **Router**: Cisco 1921 Integrated Services Router (CISCO1921/K9)
