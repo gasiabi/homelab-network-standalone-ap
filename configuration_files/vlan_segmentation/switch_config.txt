@@ -1,0 +1,33 @@
+conf t
+vlan 10
+ name KIDS
+exit
+
+vlan 20
+ name PARENTS
+exit
+
+vlan 99
+ name NATIVE
+exit
+
+interface vlan 20
+ ip address 192.168.20.2 255.255.255.0
+ no shutdown
+exit
+
+ip default-gateway 192.168.20.1
+
+interface FastEthernet0/2
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20
+ switchport trunk native vlan 99
+exit
+
+interface FastEthernet0/1
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20
+ switchport trunk native vlan 99
+exit
