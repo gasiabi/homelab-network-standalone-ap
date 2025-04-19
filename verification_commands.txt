@@ -1,0 +1,11 @@
+1. View All SSIDs and Their VLANs
+show dot11 bssid
+
+2. See SSIDs Currently Bound to Radio Interfaces
+show running-config interface Dot11Radio0
+
+4. Check Clients Connected per SSID
+show dot11 associations
+
+6. Check Bridge Group
+show bridge
